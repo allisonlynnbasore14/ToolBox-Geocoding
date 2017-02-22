@@ -10,26 +10,12 @@ https://sites.google.com/site/sd15spring/home/project-toolbox/geocoding-and-web-
 from urllib.request import urlopen
 import json
 
-#MYAPI =  AIzaSyDNoQSj_sKLeWGPNU5WjqfAtZzgZ9a7TRc 
-
-# Useful URLs (you need to add the appropriate parameters for your requests)
-GMAPS_BASE_URL = "https://maps.googleapis.com/maps/api/geocode/json"
-MBTA_BASE_URL = "http://realtime.mbta.com/developer/api/v2/stopsbylocation"
-MBTA_DEMO_API_KEY = "wX9NwuHnZU2ToO7GmGR9uw"
-
 GoogleAPI = 'AIzaSyAox26uPgX2Gv-A0dNWiYN3D3ZuFQ6VKUg' 
 ExampleGoogleCall = 'https://maps.googleapis.com/maps/api/geocode/json?address=1000+Olin+Way,+Needham,+MA&key=AIzaSyAox26uPgX2Gv-A0dNWiYN3D3ZuFQ6VKUg'
-
-# A little bit of scaffolding if you want to use it
 
 from urllib.request import urlopen
 import json
 from pprint import pprint
-#originial below
-#url = "https://maps.googleapis.com/maps/api/geocode/json?address=Fenway%20Park"
-#f = urlopen(url)
-#response_text = f.read()
-#response_data = json.loads(str(response_text, "utf-8"))
 
 
 url = 'https://maps.googleapis.com/maps/api/geocode/json?address=543+Main+Street,+Burdick,+KS&key=AIzaSyAox26uPgX2Gv-A0dNWiYN3D3ZuFQ6VKUg'
@@ -39,15 +25,11 @@ response_data = json.loads(str(response_text, "utf-8"))
 
 
 api_Tstations = 'yGzxTxX6v02HXFVwHy1GFA' 
-#pprint(response_data)
 
-#print(response_data["results"][0]["formatted_address"])
 lat = response_data["results"][0]["geometry"]["location"]["lat"]
 lng = response_data["results"][0]["geometry"]["location"]["lng"]
 m = lat,lng
 
-
-#print(response_data["results"][0]["geometry"][0]["location"][0]["lat"][0])
 
 def get_lat_long(place_name):
     """
