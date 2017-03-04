@@ -10,21 +10,20 @@ https://sites.google.com/site/sd15spring/home/project-toolbox/geocoding-and-web-
 from urllib.request import urlopen
 import json
 
-GoogleAPI = 'AIzaSyAox26uPgX2Gv-A0dNWiYN3D3ZuFQ6VKUg' 
-ExampleGoogleCall = 'https://maps.googleapis.com/maps/api/geocode/json?address=1000+Olin+Way,+Needham,+MA&key=AIzaSyAox26uPgX2Gv-A0dNWiYN3D3ZuFQ6VKUg'
+GoogleAPI = #####
+ExampleGoogleCall = ###
 
 from urllib.request import urlopen
 import json
 from pprint import pprint
 
 
-url = 'https://maps.googleapis.com/maps/api/geocode/json?address=543+Main+Street,+Burdick,+KS&key=AIzaSyAox26uPgX2Gv-A0dNWiYN3D3ZuFQ6VKUg'
-f = urlopen(url)
+url = ###
 response_text = f.read()
 response_data = json.loads(str(response_text, "utf-8"))
 
 
-api_Tstations = 'yGzxTxX6v02HXFVwHy1GFA' 
+api_Tstations = ###
 
 lat = response_data["results"][0]["geometry"]["location"]["lat"]
 lng = response_data["results"][0]["geometry"]["location"]["lng"]
